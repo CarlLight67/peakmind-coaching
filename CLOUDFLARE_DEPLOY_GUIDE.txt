@@ -1,0 +1,101 @@
+================================================================================
+                    PEAKMIND CLOUDFLARE DEPLOY GUIDE
+================================================================================
+
+📦 FOLDER TO UPLOAD: gym-cloudflare/
+
+FILES INCLUDED:
+  ├── index.html
+  ├── _redirects
+  ├── assets/
+  │   ├── index-qq5_itgs.js
+  │   └── index-gwyh8ema.css
+  ├── alex.mp4
+  ├── galaxy.mp4
+  ├── goku.mp4
+  ├── guts.mp4
+  ├── toji.mp4
+  ├── yujiro.mp4
+  └── human.png
+
+================================================================================
+STEP 1: UPLOAD TO CLOUDFLARE PAGES
+================================================================================
+
+1. Open browser and go to: https://dash.cloudflare.com
+
+2. Click "Pages" in left sidebar
+
+3. Click "Create project"
+
+4. Select "Direct upload" (NOT GitHub)
+
+5. Drag & drop the ENTIRE "gym-cloudflare" folder into the drop zone
+
+6. Project name: peakmind-coaching
+
+7. Click "Upload"
+
+================================================================================
+STEP 2: ADD ENVIRONMENT VARIABLE (Web3Forms API Key)
+================================================================================
+
+1. In Cloudflare Pages, go to: Settings → Environment variables
+
+2. Click "Add variable"
+
+3. Fill in:
+   - Variable name: WEB3FORMS_KEY
+   - Value: 47b049d5-a293-4622-868a-3ac6c388492e
+
+4. Click "Save"
+
+5. IMPORTANT: Add same variable to "Production" environment too
+
+================================================================================
+STEP 3: ADD SECURITY HEADERS
+================================================================================
+
+1. Go to: Settings → Custom headers
+
+2. Add these headers:
+
+   X-Frame-Options: DENY
+   X-Content-Type-Options: nosniff
+   Referrer-Policy: strict-origin-when-cross-origin
+
+3. Click "Save"
+
+================================================================================
+STEP 4: DEPLOY & VERIFY
+================================================================================
+
+1. Go to "Deployments" tab
+
+2. Click "Retry deployment" if needed
+
+3. Wait for deployment to complete (1-2 minutes)
+
+4. Click the preview URL to test
+
+================================================================================
+🌐 YOUR SITE URL WILL BE:
+   https://peakmind-coaching.pages.dev
+
+================================================================================
+✅ DONE!
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Q: Site shows blank or 404?
+A: Make sure _redirects is included in the upload
+
+Q: Videos not loading?
+A: Cloudflare Pages serves from root, should work automatically
+
+Q: Form not working?
+A: You need Web3Forms - need to add form functionality separately
+
+================================================================================
