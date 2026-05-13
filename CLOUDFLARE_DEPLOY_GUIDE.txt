@@ -45,7 +45,7 @@ STEP 2: ADD ENVIRONMENT VARIABLE (Web3Forms API Key)
 2. Click "Add variable"
 
 3. Fill in:
-   - Variable name: WEB3FORMS_KEY
+   - Variable name: WEB3FORMS_ACCESS_KEY
    - Value: 47b049d5-a293-4622-868a-3ac6c388492e
 
 4. Click "Save"
